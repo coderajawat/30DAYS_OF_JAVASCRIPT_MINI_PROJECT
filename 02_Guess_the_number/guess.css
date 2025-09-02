@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    text-align: center;
+    padding: 4rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+.container p{
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+
+.input-container{
+    text-align: center;
+}
+
+.input-container label{
+    font-size: 1.3rem;
+}
+
+#guessField{
+    height: 2.3rem;
+    width: 20rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;
+}
+
+.btn-container{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn{
+    height: 2.5rem;
+    width: 6.5rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+#submit-btn{
+    background-color: rgb(0, 255, 68);
+}
+
+#start-btn{
+    background-color: aqua;
+}
+
+.result-container{
+    margin-top: 1.3rem;
+}
+
+.result-container p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
