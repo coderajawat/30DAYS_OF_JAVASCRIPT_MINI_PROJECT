@@ -15,7 +15,7 @@
       <div class="config-option">
         <h4 class="option-title">Select Category</h4>
         <div class="category-options">
-          <button class="category-option">Programming</button>
+          <button class="category-option active">Programming</button>
           <button class="category-option">Geography</button>
           <button class="category-option">Mathematics</button>
           <button class="category-option">Entertainment</button>
@@ -25,14 +25,14 @@
       <div class="config-option">
         <h4 class="option-title">No. of Questions</h4>
         <div class="question-options">
-          <button class="question-option">5</button>
+          <button class="question-option active">5</button>
           <button class="question-option">10</button>
           <button class="question-option">15</button>
           <button class="question-option">20</button>
           <button class="question-option">25</button>
         </div>
       </div>
-      <button class="start-quiz-btn">Start Quiz</button>
+      <button class="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
     </div>
 
     <!-- Quiz Container -->
@@ -60,7 +60,7 @@
 
     <!-- Result Container -->
      <div class="result-container">
-        <img src="./img/quiz-over.png" alt="" class="result-img">
+        <img src="./img/quiz-over.png" alt="Quiz Completed" class="result-img">
         <h2 class="result-title">Quiz Completed!</h2>
         <p class="result-message"></p>
         <button class="try-again-btn">Try Again</button>

@@ -24,6 +24,7 @@ body {
 }
 
 .config-container {
+  display: block;
   width: 415px;
   padding: 25px;
   text-align: center;
@@ -112,8 +113,12 @@ body {
 }
 
 .quiz-container {
-    display: block;
+  display: none;
   width: 480px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
 }
 
 .quiz-container .quiz-header {
@@ -121,7 +126,8 @@ body {
   align-items: center;
   padding: 14px 25px;
   justify-content: space-between;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+  background: transparent;
+  box-shadow: inset 0 -1px 0 #e0e0e0;
 }
 
 .quiz-header .quiz-title {
@@ -133,13 +139,13 @@ body {
   display: flex;
   width: 70px;
   color: #fff;
-  display: flex;
   align-items: center;
   gap: 5px;
   font-weight: 600;
   padding: 7px 9px;
   border-radius: 6px;
   background-color: #32313c;
+  transition: 0.3s ease;
 }
 
 .quiz-header .quiz-timer span {
@@ -198,7 +204,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #c6c6c6;
+  border-top: 1px solid #e0e0e0;
+  background: transparent;
 }
 
 .quiz-footer .question-status {
@@ -240,6 +247,93 @@ body {
 }
 
 .result-container .try-again-btn {
-    margin-top: 30px;
-    padding: 12px 20px;
+  margin-top: 30px;
+  padding: 12px 20px;
 }
+
+/* Responsive: 412px */
+@media (max-width: 412px) {
+  .config-container,
+  .quiz-container,
+  .result-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+
+  .config-container .config-title,
+  .quiz-header .quiz-title {
+    font-size: 1.1rem;
+  }
+
+  .quiz-content .question-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .quiz-content .answer-option {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quiz-content .answer-option span {
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
+  .config-option button,
+  .config-container .start-quiz-btn,
+  .quiz-footer .next-question-btn,
+  .result-container .try-again-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 8px;
+  }
+
+  .quiz-header .quiz-timer {
+    font-size: 0.85rem;
+    padding: 4px 7px;
+    gap: 2px;
+  }
+
+  .quiz-header .quiz-timer span {
+    font-size: 1rem;
+  }
+
+  .quiz-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .quiz-footer .question-status {
+    font-size: 0.9rem;
+  }
+
+  .quiz-footer .next-question-btn {
+    justify-content: center;
+  }
+
+  .result-container {
+    padding: 20px;
+  }
+
+  .result-container .result-img {
+    width: 90px;
+  }
+
+  .result-container .result-title {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+
+  .result-container .result-message {
+    font-size: 0.95rem;
+  }
+}
+
