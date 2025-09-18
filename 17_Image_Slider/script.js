@@ -1,31 +1,22 @@
-const swiper = new Swiper('.slider-wrapper', {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 30,
+let scrollContainer = document.querySelector(".card-list-container");
+let backBtn = document.getElementById("backBtn");
+let nextBtn = document.getElementById("nextBtn");
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // Responsive Breakpoints
-  breakpoints: {
-    0: {
-        slidesPerView: 1
-    },
-    768: {
-        slidesPerView: 2
-    },
-    1024: {
-        slidesPerView: 3
-    },
-  }
+scrollContainer.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  scrollContainer.scrollLeft += evt.deltaY;
 });
+
+nextBtn.addEventListener("click", () => {
+  scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft += 1100;
+});
+
+backBtn.addEventListener("click", () => {
+  scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft -= 1100;
+});
+
+
+
+

@@ -8,21 +8,45 @@
 }
 
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background: url(img/bg.jpg) #030728 no-repeat center;
 }
 
 .slider-wrapper{
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 70px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
 }
 
-.card-list .card-item{
+.card-list-container{
+    width: 1100px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.card-list-container > div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.card-list-container::-webkit-scrollbar{
+    display: none;
+}
+
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.card-list-container .card-item{
     color: #fff;
+    width: 340px;
     user-select: none;
     padding: 35px;
     display: flex;
@@ -35,7 +59,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.card-list .card-item .user-image{
+.card-list-container .card-item .user-image{
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -44,14 +68,14 @@ body{
     padding: 4px;
 }
 
-.card-list .card-item .user-profession{
+.card-list-container .card-item .user-profession{
     font-size: 1.15rem;
     color: #e3e3e3;
     font-weight: 500;
     margin: 14px 0 40px;
 }
 
-.card-list .card-item .message-button{
+.card-list-container .card-item .message-button{
     font-size: 1.25rem;
     padding: 10px 35px;
     color: #030728;
@@ -63,34 +87,8 @@ body{
     transition: 0.2s ease;
 }
 
-.card-list .card-item .message-button:hover{
+.card-list-container .card-item .message-button:hover{
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #fff;
     color: #fff;
-}
-
-.slider-wrapper .swiper-pagination-bullet{
-    background: #fff;
-    height: 15px;
-    width: 15px;
-}
-
-.slider-wrapper .swiper-slide-button{
-    color: #fff;
-    margin-top: -50px;
-    transition: 0.2s ease;
-}
-
-.slider-wrapper .swiper-slide-button:hover{
-    color: #4658ff;
-}
-
-@media (max-width: 768px) {
-    .slider-wrapper{
-        margin: 0 10px 40px;
-    }
-
-    .slider-wrapper .swiper-slide-button{
-        display: none;
-    }
 }
