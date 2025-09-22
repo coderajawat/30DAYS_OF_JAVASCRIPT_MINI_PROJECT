@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #010758, #490d61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.hero h1 span {
+  color: #ff2963;
+}
+
+textarea {
+  width: 600px;
+  height: 250px;
+  background: #403d84;
+  color: #fff;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  padding: 20px;
+  border-radius: 10px;
+  resize: none;
+  margin-bottom: 30px;
+}
+
+textarea::placeholder {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.row {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  background: #ff2963;
+  color: #fff;
+  font-size: 16px;
+  padding: 0px 30px;
+  border-radius: 35px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button img {
+  width: 16px;
+  margin-right: 10px;
+}
+
+select {
+  flex: 1;
+  color: #fff;
+  background: #403d84;
+  width: 180px;
+  height: 50px;
+  padding: 0 20px;
+  outline: 0;
+  border: 0;
+  border-radius: 35px;
+  appearance: none;
+  background-image: url(img/dropdown.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-x: calc(100% - 20px);
+  background-position-y: 20px;
+}
+
+
+@media (max-width: 768px) {
+  textarea,
+  .row {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  select {
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    padding: 20px 20px;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+    padding: 20px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  textarea {
+    height: 200px;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  button img {
+    font-size: 20px;
+  }
+}
