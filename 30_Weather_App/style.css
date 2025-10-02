@@ -204,3 +204,17 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 428px) {
+  .search-box{
+    flex-direction: column;
+  }
+
+  #cityInput{
+    width: 100%;
+  }
+
+  #searchBtn{
+    width: 50%;
+  }
+}
