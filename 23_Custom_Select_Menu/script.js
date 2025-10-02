@@ -1,5 +1,5 @@
 let selectField = document.getElementById("selectField");
-let selectText = document.getElementById("selectField");
+let selectText = document.getElementById("selectText");
 let options = document.getElementsByClassName("options");
 let list = document.getElementById("list");
 let arrowIcon = document.getElementById("arrowIcon");
